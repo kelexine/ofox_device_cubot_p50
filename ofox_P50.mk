@@ -12,11 +12,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from P50 device
 $(call inherit-product, device/cubot/P50/device.mk)
 
-# Inherit some common twrp stuff.
+# Inherit some common ofox stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 PRODUCT_DEVICE := P50
-PRODUCT_NAME := twrp_P50
+PRODUCT_NAME := ofox_P50
 PRODUCT_BRAND := CUBOT
 PRODUCT_MODEL := P50
 PRODUCT_MANUFACTURER := CUBOT MOBILE LIMITED
