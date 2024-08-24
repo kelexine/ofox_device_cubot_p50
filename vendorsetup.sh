@@ -49,12 +49,12 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_NO_MIUI_PATCH_WARNING=1
     export FOX_USE_BASH_SHELL=1
 	export FOX_ASH_IS_BASH=1
-	export FOX_USE_TAR_BINARY=1
-	export FOX_USE_SED_BINARY=1
-	export FOX_USE_XZ_UTILS=1
+	export FOX_USE_TAR_BINARY=0
+	export FOX_USE_SED_BINARY=0
+	export FOX_USE_XZ_UTILS=0
 	export OF_SKIP_MULTIUSER_FOLDERS_BACKUP=1
 	export OF_QUICK_BACKUP_LIST="/boot;/recovery;"
-	export OF_PATCH_AVB20=1
+	export OF_PATCH_AVB20=0
 	export FOX_DELETE_AROMAFM=1
 	export FOX_BUGGED_AOSP_ARB_WORKAROUND="1510672800"; # Tue Nov 14 15:20:00 GMT 2017
 	export FOX_ENABLE_APP_MANAGER=0
@@ -87,7 +87,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	# run a process after formatting data to work-around MTP issues
     export OF_RUN_POST_FORMAT_PROCESS=1
 	export OF_SKIP_ORANGEFOX_PROCESS=1
-	
+	export FOX_DRASTIC_SIZE_REDUCTION=1
 
 	# let's see what are our build VARs
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
